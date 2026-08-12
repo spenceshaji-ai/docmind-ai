@@ -1,4 +1,7 @@
+import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import About from './pages/About'
 import './App.css'
 
 function App() {
@@ -6,13 +9,10 @@ function App() {
     <>
       <Navbar title="DocMind AI" />
 
-      <div className="container text-center mt-5">
-        <h1>DocMind AI</h1>
-        <p>Your AI-powered Document Hub</p>
-        <p>Manage, understand, and interact with your documents.</p>
-
-        
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </>
   )
 }
